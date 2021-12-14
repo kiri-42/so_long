@@ -6,7 +6,13 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 18:07:23 by tkirihar          #+#    #+#             */
-/*   Updated: 2021/12/14 18:07:24 by tkirihar         ###   ########.fr       */
+/*   Updated: 2021/12/14 18:44:42 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "so_long.h"
+
+int	main(int ac, char **av)
+{
+	return (0);
+}
