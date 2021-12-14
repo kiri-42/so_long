@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 16:06:59 by tkirihar          #+#    #+#             */
-/*   Updated: 2021/12/13 17:01:10 by tkirihar         ###   ########.fr       */
+/*   Updated: 2021/12/14 21:16:09 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,5 +85,6 @@ char	*free_and_return(char *free_variable);
 int		ft_isspace(char a);
 long	ft_long_atoi(const char *str);
 bool	check_int(const char *str);
+void	exit_and_put_error(char *error_message);
 
 #endif

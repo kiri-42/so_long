@@ -6,7 +6,7 @@
 #    By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/13 13:29:24 by tkirihar          #+#    #+#              #
-#    Updated: 2021/12/13 13:29:25 by tkirihar         ###   ########.fr        #
+#    Updated: 2021/12/14 21:27:00 by tkirihar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,7 +50,8 @@ SRCS =		ft_isalpha.c \
 			get_next_line_utils.c \
 			ft_isspace.c \
 			ft_long_atoi.c \
-			check_int.c
+			check_int.c \
+			exit_and_put_error.c
 
 SRCS_B =	ft_lstnew.c \
 			ft_lstadd_front.c \
@@ -81,7 +82,7 @@ $(NAME): 	$(OBJS)
 all:		$(NAME)
 
 .c.o:
-			$(CC) $(CFLAGS) -I ./includes/ -c $< -o $(<:%.c=%.o)
+			$(CC) $(CFLAGS) -c $< -o $(<:%.c=%.o)
 
 fclean:		clean
 			$(RM) $(NAME)
