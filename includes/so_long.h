@@ -6,7 +6,14 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 18:07:21 by tkirihar          #+#    #+#             */
-/*   Updated: 2021/12/14 18:07:22 by tkirihar         ###   ########.fr       */
+/*   Updated: 2021/12/14 18:41:45 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef SO_LONG_H
+# define SO_LONG_H
+
+# include "../libft-1.4.1/libft.h"
+# include <stdio.h>
+
+#endif
