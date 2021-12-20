@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 18:07:21 by tkirihar          #+#    #+#             */
-/*   Updated: 2021/12/20 18:30:59 by tkirihar         ###   ########.fr       */
+/*   Updated: 2021/12/20 18:54:53 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,14 @@
 # include <sys/types.h>
 # include <sys/stat.h>
 # include <fcntl.h>
+
+typedef struct s_vars
+{
+	char	**map;
+	int		map_height;
+	int		map_width;
+}	t_vars;
+
 
 /* check_arg.c */
 
