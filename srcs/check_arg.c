@@ -6,11 +6,11 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 18:49:00 by tkirihar          #+#    #+#             */
-/*   Updated: 2021/12/20 16:42:55 by tkirihar         ###   ########.fr       */
+/*   Updated: 2021/12/20 17:20:04 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../includes/so_long.h"
 
 /* コマンドライン引数から受け取ったマップファイルが正しい拡張子か確認する関数 */
 static void	check_extension(char *map_file)
@@ -26,6 +26,6 @@ static void	check_extension(char *map_file)
 void	check_arg(int ac, char **av)
 {
 	if (ac != 2)
-		exit_and_put_error("the number of arguments is different");
+		exit_and_put_error("the number of arguments is different.");
 	check_extension(av[1]);
 }
