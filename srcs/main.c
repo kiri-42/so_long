@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 18:07:23 by tkirihar          #+#    #+#             */
-/*   Updated: 2021/12/21 01:50:34 by tkirihar         ###   ########.fr       */
+/*   Updated: 2021/12/21 02:36:10 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,5 @@ int	main(int ac, char **av)
 
 	check_arg(ac, av);
 	read_map_file(&game_data, av[1]);
-	return (0);
+	exit(0);
 }
