@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 18:07:23 by tkirihar          #+#    #+#             */
-/*   Updated: 2021/12/20 18:30:46 by tkirihar         ###   ########.fr       */
+/*   Updated: 2021/12/21 00:53:28 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 int	main(int ac, char **av)
 {
-	int	fd;
+	t_vars	vars;
+	int		fd;
 
 	check_arg(ac, av);
 	fd = open(av[1], O_RDONLY);
