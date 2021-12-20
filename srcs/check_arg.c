@@ -6,12 +6,13 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 18:49:00 by tkirihar          #+#    #+#             */
-/*   Updated: 2021/12/14 22:13:19 by tkirihar         ###   ########.fr       */
+/*   Updated: 2021/12/20 16:42:55 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
+/* コマンドライン引数から受け取ったマップファイルが正しい拡張子か確認する関数 */
 static void	check_extension(char *map_file)
 {
 	char	*extension;
@@ -21,6 +22,7 @@ static void	check_extension(char *map_file)
 		exit_and_put_error("the map file could not be loaded.");
 }
 
+/* コマンドライン引数が正しい形式になっているか確認する関数 */
 void	check_arg(int ac, char **av)
 {
 	if (ac != 2)
