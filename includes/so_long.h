@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 18:07:21 by tkirihar          #+#    #+#             */
-/*   Updated: 2021/12/20 17:03:21 by tkirihar         ###   ########.fr       */
+/*   Updated: 2021/12/20 18:30:59 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,12 @@
 # include <sys/stat.h>
 # include <fcntl.h>
 
-/* check_arg */
+/* check_arg.c */
+
 void	check_arg(int ac, char **av);
+
+/* check_map_file.c */
+
+void	check_map_file(int fd);
 
 #endif
