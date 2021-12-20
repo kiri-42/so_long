@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 18:07:21 by tkirihar          #+#    #+#             */
-/*   Updated: 2021/12/21 00:54:55 by tkirihar         ###   ########.fr       */
+/*   Updated: 2021/12/21 01:54:31 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,12 @@
 # include <sys/stat.h>
 # include <fcntl.h>
 
-typedef struct s_vars
+typedef struct s_data
 {
 	char	**map;
 	int		map_height;
 	int		map_width;
-}	t_vars;
-
+}	t_data;
 
 /* check_arg.c */
 
@@ -33,6 +32,6 @@ void	check_arg(int ac, char **av);
 
 /* read_map_file.c */
 
-void	read_map_file(int fd);
+void	read_map_file(t_data *game_data, char *map_file);
 
 #endif
