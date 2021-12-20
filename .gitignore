@@ -1,4 +1,6 @@
-/*.c
+*.c
 *.o
 *.a
 .DS_Store
+*.ber
+a.out
