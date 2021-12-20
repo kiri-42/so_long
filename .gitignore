@@ -1,6 +1,4 @@
-*
-!*/
-!*.c
-!*.h
-!Makefile
-!.gitignore
+/*.c
+*.o
+*.a
+.DS_Store
