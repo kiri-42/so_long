@@ -1,4 +1,3 @@
-*.c
 *.o
 *.a
 .DS_Store
