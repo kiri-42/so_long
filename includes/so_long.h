@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 18:07:21 by tkirihar          #+#    #+#             */
-/*   Updated: 2021/12/20 18:54:53 by tkirihar         ###   ########.fr       */
+/*   Updated: 2021/12/21 00:54:55 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ typedef struct s_vars
 
 void	check_arg(int ac, char **av);
 
-/* check_map_file.c */
+/* read_map_file.c */
 
-void	check_map_file(int fd);
+void	read_map_file(int fd);
 
 #endif
