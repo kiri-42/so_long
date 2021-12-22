@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 18:23:36 by tkirihar          #+#    #+#             */
-/*   Updated: 2021/12/23 00:34:40 by tkirihar         ###   ########.fr       */
+/*   Updated: 2021/12/23 00:43:13 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static void	count_line(t_data *game_data, char *map_file)
 	close(fd);
 }
 
-static void	make_map(t_data *game_data, char *map_file)
+static void	init_map_data(t_data *game_data, char *map_file)
 {
 	char	*line;
 	int		fd;
@@ -53,7 +53,7 @@ static void	make_map(t_data *game_data, char *map_file)
 	}
 }
 
-static void	check_map(t_data *game_data)
+static void	check_map_data(t_data *game_data)
 {
 	size_t	row_i;
 	size_t	col_i;
@@ -82,7 +82,7 @@ static void	check_map(t_data *game_data)
 void	read_map_file(t_data *game_data, char *map_file)
 {
 	count_line(game_data, map_file);
-	make_map(game_data, map_file);
+	init_map_data(game_data, map_file);
 	game_data->map_width = ft_strlen(game_data->map_data[0]);
-	check_map(game_data);
+	check_map_data(game_data);
 }
