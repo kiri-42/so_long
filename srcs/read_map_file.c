@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 18:23:36 by tkirihar          #+#    #+#             */
-/*   Updated: 2021/12/22 21:47:22 by tkirihar         ###   ########.fr       */
+/*   Updated: 2021/12/23 00:34:40 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,8 @@ static void	make_map(t_data *game_data, char *map_file)
 	int		fd;
 	size_t	i;
 
-	game_data->map = (char **)malloc(sizeof(char *) * game_data->map_height);
-	if (game_data->map == NULL)
+	game_data->map_data = (char **)malloc(sizeof(char *) * game_data->map_height);
+	if (game_data->map_data == NULL)
 		exit(1);
 	fd = open(map_file, O_RDONLY);
 	i = 0;
@@ -48,7 +48,7 @@ static void	make_map(t_data *game_data, char *map_file)
 		line = get_next_line(fd);
 		if (line == NULL)
 			break ;
-		game_data->map[i] = line;
+		game_data->map_data[i] = line;
 		i++;
 	}
 }
@@ -60,8 +60,8 @@ static void	check_map(t_data *game_data)
 
 	while (row_i++ < game_data->map_height)
 	{
-		if (!(game_data->map[row_i][0] == '1' && \
-			game_data->map[row_i][game_data->map_width - 1] == '1'))
+		if (!(game_data->map_data[row_i][0] == '1' && \
+			game_data->map_data[row_i][game_data->map_width - 1] == '1'))
 		{
 			free_all();
 			exit_and_put_error("the map is not surrounded by walls.");
@@ -69,8 +69,8 @@ static void	check_map(t_data *game_data)
 	}
 	while (col_i++ < game_data->map_width)
 	{
-		if (!(game_data->map[0][col_i] == '1' && \
-			game_data->map[game_data->map_height - 1][col_i] == '1'))
+		if (!(game_data->map_data[0][col_i] == '1' && \
+			game_data->map_data[game_data->map_height - 1][col_i] == '1'))
 		{
 			free_all();
 			exit_and_put_error("the map is not surrounded by walls.");
@@ -83,6 +83,6 @@ void	read_map_file(t_data *game_data, char *map_file)
 {
 	count_line(game_data, map_file);
 	make_map(game_data, map_file);
-	game_data->map_width = ft_strlen(game_data->map[0]);
+	game_data->map_width = ft_strlen(game_data->map_data[0]);
 	check_map(game_data);
 }

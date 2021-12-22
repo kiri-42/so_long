@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 18:07:21 by tkirihar          #+#    #+#             */
-/*   Updated: 2021/12/21 01:54:31 by tkirihar         ###   ########.fr       */
+/*   Updated: 2021/12/23 00:34:40 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 
 typedef struct s_data
 {
-	char	**map;
+	char	**map_data;
 	int		map_height;
 	int		map_width;
 }	t_data;
