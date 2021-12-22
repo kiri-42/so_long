@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 18:23:36 by tkirihar          #+#    #+#             */
-/*   Updated: 2021/12/23 00:43:13 by tkirihar         ###   ########.fr       */
+/*   Updated: 2021/12/23 01:00:08 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static void	count_line(t_data *game_data, char *map_file)
 
 	fd = open(map_file, O_RDONLY);
 	if (fd == -1)
-		exit_and_put_error("The file could not be opened.");
+		finish_error("The file could not be opened.");
 	game_data->map_height = 0;
 	while (1)
 	{
@@ -64,7 +64,7 @@ static void	check_map_data(t_data *game_data)
 			game_data->map_data[row_i][game_data->map_width - 1] == '1'))
 		{
 			free_all();
-			exit_and_put_error("the map is not surrounded by walls.");
+			finish_error("the map is not surrounded by walls.");
 		}
 	}
 	while (col_i++ < game_data->map_width)
@@ -73,7 +73,7 @@ static void	check_map_data(t_data *game_data)
 			game_data->map_data[game_data->map_height - 1][col_i] == '1'))
 		{
 			free_all();
-			exit_and_put_error("the map is not surrounded by walls.");
+			finish_error("the map is not surrounded by walls.");
 		}
 	}
 }
