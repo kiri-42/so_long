@@ -3,3 +3,4 @@
 .DS_Store
 *.ber
 a.out
+*.json
