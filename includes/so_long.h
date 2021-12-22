@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 18:07:21 by tkirihar          #+#    #+#             */
-/*   Updated: 2021/12/23 01:00:19 by tkirihar         ###   ########.fr       */
+/*   Updated: 2021/12/23 01:09:07 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,10 @@ void	check_arg(int ac, char **av);
 /* read_map_file.c */
 
 void	read_map_file(t_data *game_data, char *map_file);
+
+/* check_map_data.c */
+
+void	check_map_data(t_data *game_data);
 
 /* finish_error.c */
 
