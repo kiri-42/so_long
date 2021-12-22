@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 18:23:36 by tkirihar          #+#    #+#             */
-/*   Updated: 2021/12/21 02:50:34 by tkirihar         ###   ########.fr       */
+/*   Updated: 2021/12/22 21:47:22 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,15 +53,36 @@ static void	make_map(t_data *game_data, char *map_file)
 	}
 }
 
-// static void	check_map(t_data *game_data)
-// {
+static void	check_map(t_data *game_data)
+{
+	size_t	row_i;
+	size_t	col_i;
 
-// }
+	while (row_i++ < game_data->map_height)
+	{
+		if (!(game_data->map[row_i][0] == '1' && \
+			game_data->map[row_i][game_data->map_width - 1] == '1'))
+		{
+			free_all();
+			exit_and_put_error("the map is not surrounded by walls.");
+		}
+	}
+	while (col_i++ < game_data->map_width)
+	{
+		if (!(game_data->map[0][col_i] == '1' && \
+			game_data->map[game_data->map_height - 1][col_i] == '1'))
+		{
+			free_all();
+			exit_and_put_error("the map is not surrounded by walls.");
+		}
+	}
+}
 
 /* map_fileを読み込む関数 */
 void	read_map_file(t_data *game_data, char *map_file)
 {
 	count_line(game_data, map_file);
 	make_map(game_data, map_file);
-	// check_map(game_data);
+	game_data->map_width = ft_strlen(game_data->map[0]);
+	check_map(game_data);
 }
