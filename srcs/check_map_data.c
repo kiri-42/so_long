@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/23 01:13:06 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/02 23:08:22 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/02 23:13:12 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static void	is_3_or_more_in_length(t_data *game_data)
 	}
 }
 
-/* マップデータが１（壁）で囲われているか確認する関数 */
+/* Function to check if the map data is surrounded by 1 (wall) */
 static void	is_surrounded_by_wall(t_data *game_data)
 {
 	size_t	row_i;
