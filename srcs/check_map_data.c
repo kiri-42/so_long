@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/23 01:13:06 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/02 23:39:09 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/02 23:44:30 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static void	is_3_or_more_in_length(t_data *game_data)
 	if (game_data->map_height < 3 || game_data->map_width < 3)
 	{
 		free_all();
-		finish_error("Map height or width is too small");
+		finish_error("map height or width is too small");
 	}
 }
 
@@ -61,7 +61,7 @@ static void	is_equal_in_width(t_data *game_data)
 		if (ft_strlen(game_data->map_data[row_i]) != game_data->map_width)
 		{
 			free_all();
-			finish_error("Maps are not equal in width");
+			finish_error("the map is not rectangular");
 		}
 	}
 }
