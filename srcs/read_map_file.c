@@ -6,12 +6,13 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 18:23:36 by tkirihar          #+#    #+#             */
-/*   Updated: 2021/12/23 01:13:05 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/02 23:01:38 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/so_long.h"
 
+/* Function to count the number of lines in a map file */
 static void	count_line(t_data *game_data, char *map_file)
 {
 	char	*line;
@@ -32,6 +33,7 @@ static void	count_line(t_data *game_data, char *map_file)
 	close(fd);
 }
 
+/* Function to initialize the map data based on the map file */
 static void	init_map_data(t_data *game_data, char *map_file)
 {
 	char	*line;
@@ -53,9 +55,7 @@ static void	init_map_data(t_data *game_data, char *map_file)
 	}
 }
 
-
-
-/* map_fileを読み込む関数 */
+/* Function to read a map file */
 void	read_map_file(t_data *game_data, char *map_file)
 {
 	count_line(game_data, map_file);
