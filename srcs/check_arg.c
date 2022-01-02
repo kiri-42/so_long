@@ -6,14 +6,14 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 18:49:00 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/02 22:36:07 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/02 22:41:26 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/so_long.h"
 
-/* コマンドライン引数から受け取ったマップファイルが正しい拡張子か確認する関数 */
-static void	has_ber_extension(char *map_file)
+/* マップファイルが.ber拡張子か確認する関数 */
+static void	is_ber_extension(char *map_file)
 {
 	char	*extension;
 
@@ -27,5 +27,5 @@ void	check_arg(int ac, char **av)
 {
 	if (ac != 2)
 		finish_error("the number of arguments is different.");
-	has_ber_extension(av[1]);
+	is_ber_extension(av[1]);
 }
