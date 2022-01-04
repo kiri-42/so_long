@@ -6,7 +6,7 @@
 #    By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/14 18:07:26 by tkirihar          #+#    #+#              #
-#    Updated: 2022/01/04 15:20:23 by tkirihar         ###   ########.fr        #
+#    Updated: 2022/01/05 00:17:33 by tkirihar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,7 @@ all:		$(NAME)
 $(NAME):	$(OBJS)
 			$(CC) $^ $(FT_LIB) -o $@
 
-$(OBJS):	$(SRCS)
+%.o: %.c
 			$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
