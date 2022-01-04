@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 18:23:36 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/03 17:02:23 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/04 21:05:49 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,8 @@ static void	init_map_data(t_data *game_data, char *map_file)
 	int		fd;
 	size_t	i;
 
-	game_data->map_data = (char **)malloc(sizeof(char *) * game_data->map_height);
+	game_data->map_data = (char **)malloc(sizeof(char *) * \
+	game_data->map_height);
 	if (game_data->map_data == NULL)
 		exit(1);
 	fd = open(map_file, O_RDONLY);
