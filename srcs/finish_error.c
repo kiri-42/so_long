@@ -6,11 +6,11 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/23 00:55:18 by tkirihar          #+#    #+#             */
-/*   Updated: 2021/12/23 01:01:59 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/03 17:02:34 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/so_long.h"
+#include "../include/so_long.h"
 
 /* エラーメッセージを出力してプログラムを終了させる関数 */
 void	finish_error(char *error_message)

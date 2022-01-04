@@ -6,11 +6,11 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 18:23:36 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/02 23:01:38 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/03 17:02:23 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/so_long.h"
+#include "../include/so_long.h"
 
 /* Function to count the number of lines in a map file */
 static void	count_line(t_data *game_data, char *map_file)

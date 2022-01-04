@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 18:07:21 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/03 15:57:28 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/04 15:11:06 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,12 @@
 # include <sys/types.h>
 # include <sys/stat.h>
 # include <fcntl.h>
-# include "./../minilibx/mlx.h"
+// # include "../minilibx/mlx.h"
 
 typedef struct s_data
 {
+	void	*mlx;
+	void	*win;
 	char	**map_data;
 	int		map_height;
 	int		map_width;
@@ -38,6 +40,10 @@ void	read_map_file(t_data *game_data, char *map_file);
 /* check_map_data.c */
 
 void	check_map_data(t_data *game_data);
+
+/* init_mlx.c */
+
+// void	init_mlx(t_data *game_data);
 
 /* finish_error.c */
 

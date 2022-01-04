@@ -6,11 +6,11 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 18:49:00 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/02 22:42:53 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/03 17:02:27 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/so_long.h"
+#include "../include/so_long.h"
 
 /* Function to check if a map file has a .ber extension */
 static void	is_ber_extension(char *map_file)
