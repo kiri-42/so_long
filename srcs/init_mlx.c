@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 15:47:01 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/05 21:31:26 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/06 01:26:56 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,4 @@ void	init_mlx(t_data *game_data)
 	&game_data->width, &game_data->height);
 	game_data->exit = mlx_xpm_file_to_image(game_data->mlx, EXIT, \
 	&game_data->width, &game_data->height);
-	mlx_loop(game_data->mlx);
 }
