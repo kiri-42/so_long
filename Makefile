@@ -6,7 +6,7 @@
 #    By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/14 18:07:26 by tkirihar          #+#    #+#              #
-#    Updated: 2022/01/05 14:59:04 by tkirihar         ###   ########.fr        #
+#    Updated: 2022/01/05 23:47:54 by tkirihar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,7 @@ SRCS = 		srcs/main.c \
 			srcs/check_arg.c \
 			srcs/read_map_file.c \
 			srcs/init_mlx.c \
+			srcs/init_map.c
 
 OBJS = 		$(SRCS:.c=.o)
 
