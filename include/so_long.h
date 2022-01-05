@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 18:07:21 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/05 21:09:12 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/05 21:56:50 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,10 @@ void	check_map_data(t_data *game_data);
 /* init_mlx.c */
 
 void	init_mlx(t_data *game_data);
+
+/* init_map.c */
+
+void	init_map(t_data *game_data);
 
 /* finish_error.c */
 
