@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 18:07:21 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/05 00:25:52 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/05 20:21:01 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,23 @@
 # include <sys/stat.h>
 # include <fcntl.h>
 # include "../minilibx/mlx.h"
+# define FLOOR "./img/Floor.xpm"
+# define PLAYER "./img/human_2.xpm"
+# define COIN "./img/coin_floor.xpm"
+# define WALL "./img/wall_rock.xpm"
+# define ROCK "./img/stop_rock.xpm"
+# define EXIT "./img/exit.xpm"
 
 typedef struct s_data
 {
 	void	*mlx;
 	void	*win;
+	void	*floor;
+	void	*player;
+	void	*coin;
+	void	*wall;
+	void	*rock;
+	void	*exit;
 	char	**map_data;
 	int		map_height;
 	int		map_width;
