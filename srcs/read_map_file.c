@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 18:23:36 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/06 17:20:04 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/06 19:43:36 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ static void	init_map_data(t_data *game_data, char *map_file)
 	game_data->map_data = (char **)malloc(sizeof(char *) * \
 	game_data->map_height);
 	if (game_data->map_data == NULL)
-		exit(1);
+		finish_error("failed to allocate memory for map_data.");
 	fd = open(map_file, O_RDONLY);
 	i = 0;
 	while (1)
