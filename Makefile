@@ -6,7 +6,7 @@
 #    By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/14 18:07:26 by tkirihar          #+#    #+#              #
-#    Updated: 2022/01/06 17:52:38 by tkirihar         ###   ########.fr        #
+#    Updated: 2022/01/06 19:45:39 by tkirihar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,8 +23,6 @@ SRCS = 		srcs/main.c \
 			srcs/free.c
 
 OBJS = 		$(SRCS:.c=.o)
-
-# INCDIR =	-Iinclude
 
 MLX_LIB = 	minilibx/libmlx.a
 
