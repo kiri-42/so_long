@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 17:35:33 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/06 18:03:01 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/06 18:47:16 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,4 @@ void	free_map_data(t_data *game_data)
 		i++;
 	}
 	free(game_data->map_data);
-	// (void)game_data;
-	// system("leaks so_long");
 }
