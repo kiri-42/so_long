@@ -6,14 +6,14 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 18:07:23 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/06 16:55:32 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/06 17:28:03 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/so_long.h"
 
 /* Function to redraw the map */
-static void	redraw_map(t_data *game_data)
+static int	redraw_map(t_data *game_data)
 {
 	size_t	x;
 	size_t	y;
@@ -38,6 +38,7 @@ static void	redraw_map(t_data *game_data)
 		}
 		y++;
 	}
+	return (0);
 }
 
 /* Function to move the player */
@@ -120,6 +121,7 @@ int	main(int ac, char **av)
 	game_data.can_exit = false;
 	game_data.cnt_move = 0;
 	mlx_key_hook(game_data.win, key_hook, &game_data);
+	mlx_expose_hook(game_data.win, &redraw_map, &game_data);
 	mlx_loop(game_data.mlx);
 	exit(0);
 }
