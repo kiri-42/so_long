@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 21:50:50 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/06 12:51:11 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/06 15:40:52 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,6 @@ static void	init_cnt(t_data *game_data)
 	game_data->cnt_P = 0;
 	game_data->cnt_C = 0;
 	game_data->cnt_E = 0;
-}
-
-static void	put_object(t_data *game_data, size_t x, size_t y, void *object)
-{
-	mlx_put_image_to_window(game_data->mlx, game_data->win, \
-	object, game_data->width * x, game_data->height * y);
 }
 
 static void	search_object(t_data *game_data, size_t x, size_t y)

@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 18:07:21 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/06 12:48:27 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/06 14:56:48 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,10 @@ typedef struct s_data
 	char	**map_data;
 	int		map_height;
 	int		map_width;
-	size_t	player_x;
-	size_t	player_y;
+	int		player_x;
+	int		player_y;
+	bool	can_exit;
+	size_t	cnt_move;
 	size_t	cnt_P;
 	size_t	cnt_C;
 	size_t	cnt_E;
@@ -73,6 +75,10 @@ void	init_mlx(t_data *game_data);
 /* init_map.c */
 
 void	init_map(t_data *game_data);
+
+/* put_object.c */
+
+void	put_object(t_data *game_data, size_t x, size_t y, void *object);
 
 /* finish_error.c */
 
