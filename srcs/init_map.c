@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 21:50:50 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/06 02:19:46 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/06 12:51:11 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ static void	search_object(t_data *game_data, size_t x, size_t y)
 	{
 		put_object(game_data, x, y, game_data->player);
 		game_data->cnt_P++;
+		game_data->player_x = x;
+		game_data->player_y = y;
 	}
 	else if (game_data->map_data[y][x] == 'C')
 	{

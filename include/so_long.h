@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 18:07:21 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/06 01:47:45 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/06 12:48:27 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,11 @@
 # define WALL "./img/wall_rock.xpm"
 # define ROCK "./img/stop_rock.xpm"
 # define EXIT "./img/exit.xpm"
+# define W 119
+# define A 97
+# define S 115
+# define D 100
+# define ESC 65307
 
 typedef struct s_data
 {
@@ -42,6 +47,8 @@ typedef struct s_data
 	char	**map_data;
 	int		map_height;
 	int		map_width;
+	size_t	player_x;
+	size_t	player_y;
 	size_t	cnt_P;
 	size_t	cnt_C;
 	size_t	cnt_E;
