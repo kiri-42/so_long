@@ -6,12 +6,13 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 15:47:01 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/06 01:26:56 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/06 17:18:05 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/so_long.h"
 
+/* Function to initialize mlx */
 void	init_mlx(t_data *game_data)
 {
 	game_data->mlx = mlx_init();

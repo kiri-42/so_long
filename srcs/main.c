@@ -6,12 +6,13 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 18:07:23 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/06 16:34:48 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/06 16:55:32 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/so_long.h"
 
+/* Function to redraw the map */
 static void	redraw_map(t_data *game_data)
 {
 	size_t	x;
@@ -39,6 +40,7 @@ static void	redraw_map(t_data *game_data)
 	}
 }
 
+/* Function to move the player */
 static void	move_process(t_data *game_data, int next_x, int next_y)
 {
 	game_data->map_data[game_data->player_y][game_data->player_x] = '0';
@@ -49,6 +51,7 @@ static void	move_process(t_data *game_data, int next_x, int next_y)
 	redraw_map(game_data);
 }
 
+/* Function to count the coins picked up */
 static void	get_coin(t_data *game_data)
 {
 	game_data->cnt_C--;
@@ -56,6 +59,7 @@ static void	get_coin(t_data *game_data)
 		game_data->can_exit = true;
 }
 
+/* Function when stepping on the exit */
 static void	end_of_game(t_data *game_data)
 {
 	if (!game_data->can_exit)
@@ -65,6 +69,7 @@ static void	end_of_game(t_data *game_data)
 	exit(0);
 }
 
+/* Function to move the player to an arbitrary direction */
 static void	move(t_data *game_data, int move_x, int move_y)
 {
 	char	next;
@@ -84,6 +89,7 @@ static void	move(t_data *game_data, int move_x, int move_y)
 		move_process(game_data, next_x, next_y);
 }
 
+/* Functions to distribute processing by key */
 static int	key_hook(int keycode, t_data *game_data)
 {
 	(void)game_data;

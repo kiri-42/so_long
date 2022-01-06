@@ -6,12 +6,13 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 21:50:50 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/06 15:40:52 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/06 17:12:18 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/so_long.h"
 
+/* Function to initialize a variable that stores the number of objects */
 static void	init_cnt(t_data *game_data)
 {
 	game_data->cnt_P = 0;
@@ -19,6 +20,7 @@ static void	init_cnt(t_data *game_data)
 	game_data->cnt_E = 0;
 }
 
+/* Function to check which object */
 static void	search_object(t_data *game_data, size_t x, size_t y)
 {
 	if (game_data->map_data[y][x] == '1')
@@ -46,6 +48,7 @@ static void	search_object(t_data *game_data, size_t x, size_t y)
 		finish_error("the character is not registered as an object.");
 }
 
+/* Function to check if you have the correct number object */
 static void	has_object(t_data *game_data)
 {
 	if (game_data->cnt_P == 0)
@@ -58,6 +61,7 @@ static void	has_object(t_data *game_data)
 		finish_error("there's not a single exit.");
 }
 
+/* Function to initialize the map */
 void	init_map(t_data *game_data)
 {
 	size_t	height_i;

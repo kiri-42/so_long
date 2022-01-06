@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 18:23:36 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/05 17:22:33 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/06 17:20:04 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,8 @@ static void	init_map_data(t_data *game_data, char *map_file)
 	}
 }
 
-static void	remove_new_line(t_data *game_data)
+/* Function to remove newline characters at the end of a line */
+static void	remove_newline(t_data *game_data)
 {
 	size_t	i;
 	size_t	end_i;
@@ -76,7 +77,7 @@ void	read_map_file(t_data *game_data, char *map_file)
 {
 	count_line(game_data, map_file);
 	init_map_data(game_data, map_file);
-	remove_new_line(game_data);
+	remove_newline(game_data);
 	game_data->map_width = ft_strlen(game_data->map_data[0]);
 	check_map_data(game_data);
 }
