@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/23 01:13:06 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/06 10:30:54 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/06 17:54:13 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static void	is_3_or_more_in_length(t_data *game_data)
 {
 	if (game_data->map_height < 3 || game_data->map_width < 3)
 	{
-		// free_all();
+		free_map_data(game_data);
 		finish_error("map height or width is too small");
 	}
 }
@@ -32,7 +32,7 @@ static void	is_equal_in_width(t_data *game_data)
 	{
 		if (ft_strlen(game_data->map_data[row_i]) != (size_t)game_data->map_width)
 		{
-			// free_all();
+			free_map_data(game_data);
 			finish_error("the map is not rectangular");
 		}
 		row_i++;
@@ -51,7 +51,7 @@ static void	is_surrounded_by_wall(t_data *game_data)
 		if (!(game_data->map_data[row_i][0] == '1' && \
 			game_data->map_data[row_i][game_data->map_width - 1] == '1'))
 		{
-			// free_all();
+			free_map_data(game_data);
 			finish_error("the map is not surrounded by walls.");
 		}
 		row_i++;
@@ -62,7 +62,7 @@ static void	is_surrounded_by_wall(t_data *game_data)
 		if (!(game_data->map_data[0][col_i] == '1' && \
 			game_data->map_data[game_data->map_height - 1][col_i] == '1'))
 		{
-			// free_all();
+			free_map_data(game_data);
 			finish_error("the map is not surrounded by walls.");
 		}
 		col_i++;

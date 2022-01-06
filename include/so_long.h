@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 18:07:21 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/06 14:56:48 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/06 17:47:45 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,5 +83,9 @@ void	put_object(t_data *game_data, size_t x, size_t y, void *object);
 /* finish_error.c */
 
 void	finish_error(char *error_message);
+
+/* free.c */
+
+void	free_map_data(t_data *game_data);
 
 #endif

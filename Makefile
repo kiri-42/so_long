@@ -6,7 +6,7 @@
 #    By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/14 18:07:26 by tkirihar          #+#    #+#              #
-#    Updated: 2022/01/06 14:57:25 by tkirihar         ###   ########.fr        #
+#    Updated: 2022/01/06 17:52:38 by tkirihar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,8 @@ SRCS = 		srcs/main.c \
 			srcs/read_map_file.c \
 			srcs/init_mlx.c \
 			srcs/init_map.c \
-			srcs/put_object.c
+			srcs/put_object.c \
+			srcs/free.c
 
 OBJS = 		$(SRCS:.c=.o)
 
