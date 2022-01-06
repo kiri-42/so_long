@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 21:50:50 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/06 18:37:06 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/06 19:36:46 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,12 @@ static void	init_cnt(t_data *game_data)
 	game_data->cnt_E = 0;
 }
 
+static void	read_player_xy(t_data *game_data, size_t x, size_t y)
+{
+	game_data->player_x = x;
+	game_data->player_y = y;
+}
+
 /* Function to check which object */
 static void	search_object(t_data *game_data, size_t x, size_t y)
 {
@@ -31,8 +37,7 @@ static void	search_object(t_data *game_data, size_t x, size_t y)
 	{
 		put_object(game_data, x, y, game_data->player);
 		game_data->cnt_P++;
-		game_data->player_x = x;
-		game_data->player_y = y;
+		read_player_xy(game_data, x, y);
 	}
 	else if (game_data->map_data[y][x] == 'C')
 	{
