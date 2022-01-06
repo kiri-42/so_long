@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 18:07:23 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/06 17:28:03 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/06 18:23:47 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,7 @@ static void	end_of_game(t_data *game_data)
 		return ;
 	printf("count : %zu\n", ++game_data->cnt_move);
 	mlx_destroy_window(game_data->mlx, game_data->win);
+	free_map_data(game_data);
 	exit(0);
 }
 
@@ -105,6 +106,7 @@ static int	key_hook(int keycode, t_data *game_data)
 	if (keycode == ESC)
 	{
 		mlx_destroy_window(game_data->mlx, game_data->win);
+		free_map_data(game_data);
 		exit(0);
 	}
 	return (0);
@@ -123,5 +125,6 @@ int	main(int ac, char **av)
 	mlx_key_hook(game_data.win, key_hook, &game_data);
 	mlx_expose_hook(game_data.win, &redraw_map, &game_data);
 	mlx_loop(game_data.mlx);
+	free_map_data(&game_data);
 	exit(0);
 }
