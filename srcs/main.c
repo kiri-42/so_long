@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 18:07:23 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/06 16:13:17 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/06 16:34:48 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,13 +117,3 @@ int	main(int ac, char **av)
 	mlx_loop(game_data.mlx);
 	exit(0);
 }
-
-// int	main(void)
-// {
-// 	void	*mlx;
-// 	void	*mlx_win;
-
-// 	mlx = mlx_init();
-// 	mlx_win = mlx_new_window(mlx, 1000, 800, "Hello world!");
-// 	mlx_loop(mlx);
-// }
