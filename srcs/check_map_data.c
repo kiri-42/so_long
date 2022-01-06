@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/23 01:13:06 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/06 17:54:13 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/06 20:23:50 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,8 @@ static void	is_equal_in_width(t_data *game_data)
 	row_i = 0;
 	while (row_i < (size_t)game_data->map_height)
 	{
-		if (ft_strlen(game_data->map_data[row_i]) != (size_t)game_data->map_width)
+		if (ft_strlen(game_data->map_data[row_i]) != \
+		(size_t)game_data->map_width)
 		{
 			free_map_data(game_data);
 			finish_error("the map is not rectangular");
