@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 18:07:21 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/06 17:47:45 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/06 20:14:42 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,14 @@ void	init_map(t_data *game_data);
 /* put_object.c */
 
 void	put_object(t_data *game_data, size_t x, size_t y, void *object);
+
+/* key_hook.c */
+
+int		key_hook(int keycode, t_data *game_data);
+
+/* redraw_map.c */
+
+int		redraw_map(t_data *game_data);
 
 /* finish_error.c */
 
