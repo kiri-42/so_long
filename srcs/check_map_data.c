@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/23 01:13:06 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/07 23:56:47 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/08 00:09:27 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ static void	is_surrounded_by_wall(t_data *game_data)
 			game_data->map_data[game_data->map_height - 1][col_i] == '1'))
 		{
 			free_map_data(game_data);
-			finish_error("the map is not surrounded by walls.");
+			finish_error("the map is not surrounded by walls");
 		}
 		col_i++;
 	}

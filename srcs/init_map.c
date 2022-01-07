@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 21:50:50 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/06 19:36:46 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/08 00:10:13 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ static void	search_object(t_data *game_data, size_t x, size_t y)
 	else
 	{
 		free_map_data(game_data);
-		finish_error("the character is not registered as an object.");
+		finish_error("the character is not registered as an object");
 	}
 }
 
@@ -67,17 +67,17 @@ static void	has_object(t_data *game_data)
 	if (game_data->cnt_P > 1)
 	{
 		free_map_data(game_data);
-		finish_error("there are too many players.");
+		finish_error("there are too many players");
 	}
 	if (game_data->cnt_C == 0)
 	{
 		free_map_data(game_data);
-		finish_error("there's not a single coin.");
+		finish_error("there's not a single coin");
 	}
 	if (game_data->cnt_E == 0)
 	{
 		free_map_data(game_data);
-		finish_error("there's not a single exit.");
+		finish_error("there's not a single exit");
 	}
 }
 

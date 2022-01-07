@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 18:23:36 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/06 19:43:36 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/08 00:09:53 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static void	count_line(t_data *game_data, char *map_file)
 
 	fd = open(map_file, O_RDONLY);
 	if (fd == -1)
-		finish_error("The file could not be opened.");
+		finish_error("The file could not be opened");
 	game_data->map_height = 0;
 	while (1)
 	{
