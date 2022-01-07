@@ -6,16 +6,16 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/23 01:13:06 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/06 20:23:50 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/07 23:56:47 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/so_long.h"
 
 /* Function to check if map data is too small */
-static void	is_3_or_more_in_length(t_data *game_data)
+static void	is_2_or_more_in_length(t_data *game_data)
 {
-	if (game_data->map_height < 3 || game_data->map_width < 3)
+	if (game_data->map_height < 2 || game_data->map_width < 2)
 	{
 		free_map_data(game_data);
 		finish_error("map height or width is too small");
@@ -73,7 +73,7 @@ static void	is_surrounded_by_wall(t_data *game_data)
 /* Function to check if the map data is in the correct format */
 void	check_map_data(t_data *game_data)
 {
-	is_3_or_more_in_length(game_data);
+	is_2_or_more_in_length(game_data);
 	is_equal_in_width(game_data);
 	is_surrounded_by_wall(game_data);
 }
