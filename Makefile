@@ -6,7 +6,7 @@
 #    By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/14 18:07:26 by tkirihar          #+#    #+#              #
-#    Updated: 2022/01/07 18:22:41 by tkirihar         ###   ########.fr        #
+#    Updated: 2022/01/08 00:38:35 by tkirihar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,8 @@ SRCS = 		srcs/main.c \
 
 OBJS = 		$(SRCS:.c=.o)
 
+MLX_DIR = 	minilibx
+
 MLX_LIB = 	minilibx/libmlx.a
 
 FT_DIR = 	libft-1.5.1
@@ -43,8 +45,11 @@ OPT = 		-L/usr/X11R6/lib -lX11 -lXext -framework OpenGL -framework AppKit
 
 all:		$(NAME)
 
-$(NAME):	$(OBJS) $(FT_LIB)
-			$(CC) $^ $(MLX_LIB) $(OPT) -o $@
+$(NAME):	$(OBJS) $(MLX_LIB) $(FT_LIB)
+			$(CC) $^ $(OPT) -o $@
+
+$(MLX_LIB):
+			make -C $(@D)
 
 $(FT_LIB):
 			make -C $(@D)
@@ -55,6 +60,7 @@ $(FT_LIB):
 clean:
 			$(RM) $(OBJS)
 			make -C $(FT_DIR) clean
+			make -C $(MLX_DIR) clean
 
 fclean:		clean
 			$(RM) $(NAME)
