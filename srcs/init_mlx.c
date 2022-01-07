@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 15:47:01 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/07 23:44:21 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/08 00:18:30 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	init_mlx(t_data *game_data)
 	game_data->win = mlx_new_window(game_data->mlx, game_data->map_width * 32, \
 	game_data->map_height * 32, "so_long");
 	game_data->img = mlx_new_image(game_data->mlx, 32, 32);
-	game_data->floor = mlx_xpm_file_to_image(game_data->mlx, FLOOR, \
+	game_data->floor = mlx_xpm_file_to_image(game_data->mlx, FIELD, \
 	&game_data->width, &game_data->height);
 	game_data->player = mlx_xpm_file_to_image(game_data->mlx, PLAYER, \
 	&game_data->width, &game_data->height);

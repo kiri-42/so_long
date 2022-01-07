@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 18:07:21 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/07 23:41:43 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/08 00:17:20 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include <sys/stat.h>
 # include <fcntl.h>
 # include "../minilibx/mlx.h"
-# define FLOOR "./image/field.xpm"
+# define FIELD "./image/field.xpm"
 # define PLAYER "./image/player.xpm"
 # define COIN "./image/key.xpm"
 # define WALL "./image/wall.xpm"
