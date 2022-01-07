@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 15:47:01 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/06 17:18:05 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/07 23:44:21 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,6 @@ void	init_mlx(t_data *game_data)
 	game_data->coin = mlx_xpm_file_to_image(game_data->mlx, COIN, \
 	&game_data->width, &game_data->height);
 	game_data->wall = mlx_xpm_file_to_image(game_data->mlx, WALL, \
-	&game_data->width, &game_data->height);
-	game_data->rock = mlx_xpm_file_to_image(game_data->mlx, ROCK, \
 	&game_data->width, &game_data->height);
 	game_data->exit = mlx_xpm_file_to_image(game_data->mlx, EXIT, \
 	&game_data->width, &game_data->height);
