@@ -1,31 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   close_game.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/14 18:07:23 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/07 18:21:11 by tkirihar         ###   ########.fr       */
+/*   Created: 2022/01/07 18:19:54 by tkirihar          #+#    #+#             */
+/*   Updated: 2022/01/07 18:21:04 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/so_long.h"
 
-int	main(int ac, char **av)
+int	close_game(t_data *game_data)
 {
-	t_data	game_data;
-
-	check_arg(ac, av);
-	read_map_file(&game_data, av[1]);
-	init_mlx(&game_data);
-	init_map(&game_data);
-	game_data.can_exit = false;
-	game_data.cnt_move = 0;
-	mlx_key_hook(game_data.win, key_hook, &game_data);
-	mlx_hook(game_data.win, 17, 1L << 15, &close_game, &game_data);
-	mlx_expose_hook(game_data.win, &redraw_map, &game_data);
-	mlx_loop(game_data.mlx);
-	free_map_data(&game_data);
-	exit(0);
+	mlx_destroy_window(game_data->mlx, game_data->win);
+	free_map_data(game_data);
+	exit (0);
 }

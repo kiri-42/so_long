@@ -6,7 +6,7 @@
 #    By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/14 18:07:26 by tkirihar          #+#    #+#              #
-#    Updated: 2022/01/06 20:15:11 by tkirihar         ###   ########.fr        #
+#    Updated: 2022/01/07 18:22:41 by tkirihar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,8 @@ SRCS = 		srcs/main.c \
 			srcs/put_object.c \
 			srcs/free.c \
 			srcs/key_hook.c \
-			srcs/redraw_map.c
+			srcs/redraw_map.c \
+			srcs/close_game.c
 
 OBJS = 		$(SRCS:.c=.o)
 

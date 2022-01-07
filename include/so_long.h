@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 18:07:21 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/06 20:14:42 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/07 18:22:19 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,6 +91,10 @@ int		redraw_map(t_data *game_data);
 /* finish_error.c */
 
 void	finish_error(char *error_message);
+
+/* close_game.c */
+
+int		close_game(t_data *game_data);
 
 /* free.c */
 
