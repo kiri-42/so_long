@@ -1,7 +1,6 @@
 *.o
 *.a
 .DS_Store
-*.ber
 a.out
 *.json
 so_long
