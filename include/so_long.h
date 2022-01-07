@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 18:07:21 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/07 18:22:19 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/07 23:41:43 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,11 @@
 # include <sys/stat.h>
 # include <fcntl.h>
 # include "../minilibx/mlx.h"
-# define FLOOR "./img/Floor.xpm"
-# define PLAYER "./img/human_2.xpm"
-# define COIN "./img/coin_floor.xpm"
-# define WALL "./img/wall_rock.xpm"
-# define ROCK "./img/stop_rock.xpm"
-# define EXIT "./img/exit.xpm"
+# define FLOOR "./image/field.xpm"
+# define PLAYER "./image/player.xpm"
+# define COIN "./image/key.xpm"
+# define WALL "./image/wall.xpm"
+# define EXIT "./image/treasure.xpm"
 # define W 119
 # define A 97
 # define S 115
