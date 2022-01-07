@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 21:50:50 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/08 00:10:13 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/08 00:20:02 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ static void	init_cnt(t_data *game_data)
 	game_data->cnt_E = 0;
 }
 
+/* Function to read the player's position */
 static void	read_player_xy(t_data *game_data, size_t x, size_t y)
 {
 	game_data->player_x = x;
