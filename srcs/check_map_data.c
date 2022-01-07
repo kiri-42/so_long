@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/23 01:13:06 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/08 00:09:27 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/08 00:22:45 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static void	is_equal_in_width(t_data *game_data)
 		(size_t)game_data->map_width)
 		{
 			free_map_data(game_data);
-			finish_error("the map is not rectangular");
+			finish_error("map is not rectangular");
 		}
 		row_i++;
 	}
@@ -53,7 +53,7 @@ static void	is_surrounded_by_wall(t_data *game_data)
 			game_data->map_data[row_i][game_data->map_width - 1] == '1'))
 		{
 			free_map_data(game_data);
-			finish_error("the map is not surrounded by walls.");
+			finish_error("map is not surrounded by walls.");
 		}
 		row_i++;
 	}
@@ -64,7 +64,7 @@ static void	is_surrounded_by_wall(t_data *game_data)
 			game_data->map_data[game_data->map_height - 1][col_i] == '1'))
 		{
 			free_map_data(game_data);
-			finish_error("the map is not surrounded by walls");
+			finish_error("map is not surrounded by walls");
 		}
 		col_i++;
 	}
