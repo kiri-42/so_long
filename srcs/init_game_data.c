@@ -1,30 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   init_game_data.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/14 18:07:23 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/08 22:18:37 by tkirihar         ###   ########.fr       */
+/*   Created: 2022/01/08 22:16:51 by tkirihar          #+#    #+#             */
+/*   Updated: 2022/01/08 22:22:35 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/so_long.h"
 
-int	main(int ac, char **av)
+/* Function to initialize variables that need to be initialized in game_data */
+void	init_game_data(t_data *game_data)
 {
-	t_data	game_data;
-
-	check_arg(ac, av);
-	read_map_file(&game_data, av[1]);
-	init_mlx(&game_data);
-	init_game_data(&game_data);
-	init_map(&game_data);
-	mlx_key_hook(game_data.win, key_hook, &game_data);
-	mlx_hook(game_data.win, 17, 0L, &close_game, &game_data);
-	mlx_expose_hook(game_data.win, &redraw_map, &game_data);
-	mlx_loop(game_data.mlx);
-	free_map_data(&game_data);
-	exit(0);
+	game_data->cnt_P = 0;
+	game_data->cnt_C = 0;
+	game_data->cnt_E = 0;
+	game_data->can_exit = false;
+	game_data->cnt_move = 0;
 }

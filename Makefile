@@ -6,24 +6,25 @@
 #    By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/14 18:07:26 by tkirihar          #+#    #+#              #
-#    Updated: 2022/01/08 22:10:39 by tkirihar         ###   ########.fr        #
+#    Updated: 2022/01/08 22:38:48 by tkirihar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = 		so_long
 
 SRCS = 		srcs/main.c \
-			srcs/check_map_data.c \
-			srcs/finish_error.c \
 			srcs/check_arg.c \
 			srcs/read_map_file.c \
+			srcs/check_map_data.c \
 			srcs/init_mlx.c \
+			srcs/init_game_data.c \
 			srcs/init_map.c \
 			srcs/put_object.c \
-			srcs/free.c \
 			srcs/key_hook.c \
 			srcs/redraw_map.c \
-			srcs/close_game.c
+			srcs/finish_error.c \
+			srcs/close_game.c \
+			srcs/free.c 
 
 OBJS = 		$(SRCS:.c=.o)
 

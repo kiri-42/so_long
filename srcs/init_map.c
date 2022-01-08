@@ -6,19 +6,11 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 21:50:50 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/08 00:20:02 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/08 22:29:26 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/so_long.h"
-
-/* Function to initialize a variable that stores the number of objects */
-static void	init_cnt(t_data *game_data)
-{
-	game_data->cnt_P = 0;
-	game_data->cnt_C = 0;
-	game_data->cnt_E = 0;
-}
 
 /* Function to read the player's position */
 static void	read_player_xy(t_data *game_data, size_t x, size_t y)
@@ -88,7 +80,6 @@ void	init_map(t_data *game_data)
 	size_t	height_i;
 	size_t	width_i;
 
-	init_cnt(game_data);
 	height_i = 0;
 	while (height_i < (size_t)game_data->map_height)
 	{
