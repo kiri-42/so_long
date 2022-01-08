@@ -6,7 +6,7 @@
 #    By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/14 18:07:26 by tkirihar          #+#    #+#              #
-#    Updated: 2022/01/08 22:38:48 by tkirihar         ###   ########.fr        #
+#    Updated: 2022/01/08 23:51:06 by tkirihar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ SRCS = 		srcs/main.c \
 			srcs/redraw_map.c \
 			srcs/finish_error.c \
 			srcs/close_game.c \
-			srcs/free.c 
+			srcs/free.c
 
 OBJS = 		$(SRCS:.c=.o)
 
@@ -43,6 +43,8 @@ RM =		rm -f
 CFLAGS =	-Wall -Wextra -Werror
 
 OPT = 		-L/usr/X11R6/lib -lX11 -lXext -framework OpenGL -framework AppKit
+
+.PHONY: all re clean fclean
 
 all:		$(NAME)
 
