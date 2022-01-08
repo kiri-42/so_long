@@ -6,7 +6,7 @@
 #    By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/14 18:07:26 by tkirihar          #+#    #+#              #
-#    Updated: 2022/01/08 00:38:35 by tkirihar         ###   ########.fr        #
+#    Updated: 2022/01/08 22:10:39 by tkirihar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,6 +56,10 @@ $(FT_LIB):
 
 %.o:		%.c
 			$(CC) $(CFLAGS) -c $< -o $@
+
+re:
+			make fclean
+			make
 
 clean:
 			$(RM) $(OBJS)
