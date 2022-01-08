@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 20:05:32 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/07 18:25:15 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/08 22:44:01 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,10 +75,6 @@ int	key_hook(int keycode, t_data *game_data)
 	else if (keycode == D)
 		move(game_data, 1, 0);
 	else if (keycode == ESC)
-	{
-		mlx_destroy_window(game_data->mlx, game_data->win);
-		free_map_data(game_data);
-		exit(0);
-	}
+		close_game(game_data);
 	return (0);
 }
