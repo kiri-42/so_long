@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 20:13:13 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/06 20:14:27 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/09 14:24:09 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	redraw_map(t_data *game_data)
 			if (game_data->map_data[y][x] == '1')
 				put_object(game_data, x, y, game_data->wall);
 			else if (game_data->map_data[y][x] == '0')
-				put_object(game_data, x, y, game_data->floor);
+				put_object(game_data, x, y, game_data->field);
 			else if (game_data->map_data[y][x] == 'P')
 				put_object(game_data, x, y, game_data->player);
 			else if (game_data->map_data[y][x] == 'C')

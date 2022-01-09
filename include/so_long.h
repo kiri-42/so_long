@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 18:07:21 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/08 22:26:33 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/09 14:24:09 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ typedef struct s_data
 	void	*img;
 	int		height;
 	int		width;
-	void	*floor;
+	void	*field;
 	void	*player;
 	void	*coin;
 	void	*wall;
