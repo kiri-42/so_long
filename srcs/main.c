@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 18:07:23 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/08 22:18:37 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/09 14:29:13 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,17 @@
 
 int	main(int ac, char **av)
 {
-	t_data	game_data;
+	t_game_data	gdata;
 
 	check_arg(ac, av);
-	read_map_file(&game_data, av[1]);
-	init_mlx(&game_data);
-	init_game_data(&game_data);
-	init_map(&game_data);
-	mlx_key_hook(game_data.win, key_hook, &game_data);
-	mlx_hook(game_data.win, 17, 0L, &close_game, &game_data);
-	mlx_expose_hook(game_data.win, &redraw_map, &game_data);
-	mlx_loop(game_data.mlx);
-	free_map_data(&game_data);
+	read_map_file(&gdata, av[1]);
+	init_mlx(&gdata);
+	init_game_data(&gdata);
+	init_map(&gdata);
+	mlx_key_hook(gdata.win, key_hook, &gdata);
+	mlx_hook(gdata.win, 17, 0L, &close_game, &gdata);
+	mlx_expose_hook(gdata.win, &redraw_map, &gdata);
+	mlx_loop(gdata.mlx);
+	free_map_data(&gdata);
 	exit(0);
 }
