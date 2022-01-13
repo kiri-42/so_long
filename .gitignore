@@ -1,6 +1,0 @@
-*.o
-*.a
-.DS_Store
-a.out
-*.json
-so_long
