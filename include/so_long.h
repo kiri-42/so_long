@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 18:07:21 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/08 00:17:20 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/09 14:28:23 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,14 +30,14 @@
 # define D 100
 # define ESC 65307
 
-typedef struct s_data
+typedef struct s_game_data
 {
 	void	*mlx;
 	void	*win;
 	void	*img;
 	int		height;
 	int		width;
-	void	*floor;
+	void	*field;
 	void	*player;
 	void	*coin;
 	void	*wall;
@@ -53,7 +53,7 @@ typedef struct s_data
 	size_t	cnt_P;
 	size_t	cnt_C;
 	size_t	cnt_E;
-}	t_data;
+}	t_game_data;
 
 /* check_arg.c */
 
@@ -61,31 +61,35 @@ void	check_arg(int ac, char **av);
 
 /* read_map_file.c */
 
-void	read_map_file(t_data *game_data, char *map_file);
+void	read_map_file(t_game_data *game_data, char *map_file);
 
 /* check_map_data.c */
 
-void	check_map_data(t_data *game_data);
+void	check_map_data(t_game_data *game_data);
 
 /* init_mlx.c */
 
-void	init_mlx(t_data *game_data);
+void	init_mlx(t_game_data *game_data);
+
+/* init_game_data.c */
+
+void	init_game_data(t_game_data *game_data);
 
 /* init_map.c */
 
-void	init_map(t_data *game_data);
+void	init_map(t_game_data *game_data);
 
 /* put_object.c */
 
-void	put_object(t_data *game_data, size_t x, size_t y, void *object);
+void	put_object(t_game_data *game_data, size_t x, size_t y, void *object);
 
 /* key_hook.c */
 
-int		key_hook(int keycode, t_data *game_data);
+int		key_hook(int keycode, t_game_data *game_data);
 
 /* redraw_map.c */
 
-int		redraw_map(t_data *game_data);
+int		redraw_map(t_game_data *game_data);
 
 /* finish_error.c */
 
@@ -93,10 +97,10 @@ void	finish_error(char *error_message);
 
 /* close_game.c */
 
-int		close_game(t_data *game_data);
+int		close_game(t_game_data *game_data);
 
 /* free.c */
 
-void	free_map_data(t_data *game_data);
+void	free_map_data(t_game_data *game_data);
 
 #endif

@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   close_game.c                                       :+:      :+:    :+:   */
+/*   init_game_data.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/07 18:19:54 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/09 14:31:49 by tkirihar         ###   ########.fr       */
+/*   Created: 2022/01/08 22:16:51 by tkirihar          #+#    #+#             */
+/*   Updated: 2022/01/09 14:31:31 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/so_long.h"
 
-/* Function to close the window */
-int	close_game(t_game_data *gdata)
+/* Function to initialize variables that need to be initialized in game_data */
+void	init_game_data(t_game_data *gdata)
 {
-	mlx_destroy_window(gdata->mlx, gdata->win);
-	free_map_data(gdata);
-	exit (0);
+	gdata->cnt_P = 0;
+	gdata->cnt_C = 0;
+	gdata->cnt_E = 0;
+	gdata->can_exit = false;
+	gdata->cnt_move = 0;
 }

@@ -6,99 +6,90 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 21:50:50 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/08 00:20:02 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/09 14:34:53 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/so_long.h"
 
-/* Function to initialize a variable that stores the number of objects */
-static void	init_cnt(t_data *game_data)
-{
-	game_data->cnt_P = 0;
-	game_data->cnt_C = 0;
-	game_data->cnt_E = 0;
-}
-
 /* Function to read the player's position */
-static void	read_player_xy(t_data *game_data, size_t x, size_t y)
+static void	read_player_xy(t_game_data *gdata, size_t x, size_t y)
 {
-	game_data->player_x = x;
-	game_data->player_y = y;
+	gdata->player_x = x;
+	gdata->player_y = y;
 }
 
 /* Function to check which object */
-static void	search_object(t_data *game_data, size_t x, size_t y)
+static void	search_object(t_game_data *gdata, size_t x, size_t y)
 {
-	if (game_data->map_data[y][x] == '1')
-		put_object(game_data, x, y, game_data->wall);
-	else if (game_data->map_data[y][x] == '0')
-		put_object(game_data, x, y, game_data->floor);
-	else if (game_data->map_data[y][x] == 'P')
+	if (gdata->map_data[y][x] == '1')
+		put_object(gdata, x, y, gdata->wall);
+	else if (gdata->map_data[y][x] == '0')
+		put_object(gdata, x, y, gdata->field);
+	else if (gdata->map_data[y][x] == 'P')
 	{
-		put_object(game_data, x, y, game_data->player);
-		game_data->cnt_P++;
-		read_player_xy(game_data, x, y);
+		put_object(gdata, x, y, gdata->player);
+		gdata->cnt_P++;
+		read_player_xy(gdata, x, y);
 	}
-	else if (game_data->map_data[y][x] == 'C')
+	else if (gdata->map_data[y][x] == 'C')
 	{
-		put_object(game_data, x, y, game_data->coin);
-		game_data->cnt_C++;
+		put_object(gdata, x, y, gdata->coin);
+		gdata->cnt_C++;
 	}
-	else if (game_data->map_data[y][x] == 'E')
+	else if (gdata->map_data[y][x] == 'E')
 	{
-		put_object(game_data, x, y, game_data->exit);
-		game_data->cnt_E++;
+		put_object(gdata, x, y, gdata->exit);
+		gdata->cnt_E++;
 	}
 	else
 	{
-		free_map_data(game_data);
+		free_map_data(gdata);
 		finish_error("the character is not registered as an object");
 	}
 }
 
 /* Function to check if you have the correct number object */
-static void	has_object(t_data *game_data)
+static void	has_object(t_game_data *gdata)
 {
-	if (game_data->cnt_P == 0)
+	if (gdata->cnt_P == 0)
 	{
-		free_map_data(game_data);
+		free_map_data(gdata);
 		finish_error("there's not a single player");
 	}
-	if (game_data->cnt_P > 1)
+	if (gdata->cnt_P > 1)
 	{
-		free_map_data(game_data);
+		free_map_data(gdata);
 		finish_error("there are too many players");
 	}
-	if (game_data->cnt_C == 0)
+	if (gdata->cnt_C == 0)
 	{
-		free_map_data(game_data);
+		free_map_data(gdata);
 		finish_error("there's not a single coin");
 	}
-	if (game_data->cnt_E == 0)
+	if (gdata->cnt_E == 0)
 	{
-		free_map_data(game_data);
+		free_map_data(gdata);
 		finish_error("there's not a single exit");
 	}
 }
 
 /* Function to initialize the map */
-void	init_map(t_data *game_data)
+void	init_map(t_game_data *gdata)
 {
 	size_t	height_i;
 	size_t	width_i;
 
-	init_cnt(game_data);
 	height_i = 0;
-	while (height_i < (size_t)game_data->map_height)
+	while (height_i < (size_t)gdata->map_height)
 	{
 		width_i = 0;
-		while (width_i < (size_t)game_data->map_width)
+		while (width_i < (size_t)gdata->map_width)
 		{
-			search_object(game_data, width_i, height_i);
+			search_object(gdata, width_i, height_i);
 			width_i++;
 		}
 		height_i++;
 	}
-	has_object(game_data);
+	has_object(gdata);
 }
